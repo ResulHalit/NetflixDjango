@@ -6,7 +6,7 @@ from django.db.models import Q
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-
+# profilleri görüntüleme
 def profiles(request):
     profiles = Profiles.objects.filter(owner = request.user.profil)
     profile = request.user.profil
